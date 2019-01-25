@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>Simplified Educational Flappy Bird Game</title>
+        <link rel = "stylesheet" href = "game.css">
+        <script src = "game.js"></script>
+    </head>
+    <body>
+        <img id="flappyBirdTitle" src="flappyBird.png" width="400" height="200">
+        <canvas id="myCanvas" width="480" height="400"></canvas>
+        <button id="start" onclick="startGame()">START GAME</button>
+        <div id="quiz">
+            <div class="question" >
+                <p> 1. Which of the following is not a form of secondary memory?</p>
+                <div class="answers" id="firstDiv">
+                 ¢   <button>Hard Disk Drive</button>
+                    <button>Solid State Drive</button>
+                    <button>Random Access Memory</button> <!--Correct Answer--> 
+                </div>
+            </div>
+            <div class="question">
+                <p> 2. Which of the following is not a part of the machine instruction cycle?</p>
+                <div class="answers" id="secondDiv">
+                    <button>Store</button>
+                    <button>Decode</button>
+                    <button>Encrypt</button> <!--Correct Answer--> 
+                    <button>Fetch</button>
+                </div>
+            </div>
+            <div class="question">
+                <p>3. Which of the following is not a type of bus?</p>
+                <div class="answers" id="thirdDiv">
+                    <button>Transport Bus</button> <!--Correct Answer--> 
+                    <button>Address Bus</button>
+                    <button>Control Bus</button>
+                    <button>Data Bus</button>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
