@@ -1,0 +1,97 @@
+body {
+    background-image: url(background.png);
+    background-color: #0099cc;
+    background-position: 0 100%;
+    background-repeat: repeat-x;
+    background-attachment: fixed;
+
+    font-size: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+}
+canvas {
+    background:black;
+    display: block;
+    margin: 0 auto;
+}
+p {
+    display: block;
+    text-align: center;
+    
+}
+button {
+    margin: 0 auto;
+    text-align: center;
+    outline: 0;
+}
+#start {
+    background-color: #004A7F;
+    border-radius: 10px;
+    border: none;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: block;
+    margin-top: 10px;
+    font-size: 32px;
+    padding: 15px 15px;
+    text-decoration: none;
+    animation: glowing 1500ms infinite;
+}
+#start[disabled] {
+    background-color: grey;
+    animation: none;
+}
+@keyframes glowing {
+    0% { background-color: #B20000; box-shadow: 0 0 3px #B20000; }
+    50% { background-color: #FF0000; box-shadow: 0 0 40px #FF0000; }
+    100% { background-color: #B20000; box-shadow: 0 0 3px #B20000; }
+}
+#quiz button {
+    display: block;
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    transition-property: color;
+    transition-duration: 0.3s;
+
+    padding: 10px 15px;
+    background: #2098D1;
+    border: white 3px solid;
+    color: white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font: inherit;
+}
+#quiz button:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: red;
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    transition-property: transform;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+}
+#quiz button:hover {
+    color: white;
+}
+#quiz button:hover:before {
+    transform: scaleX(1);
+}
+#quiz .answers {
+    display: none;
+}
+#quiz .answers.correct button {
+    background: green;
+}
